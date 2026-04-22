@@ -1,3 +1,67 @@
-flowchart TD
-    A[Peak] --> 1(StatusBar)
-    A --> C(Movement)
+classDiagram
+    Statuses <|-- Weigth
+    Statuses <|-- Damage
+    Statuses <|-- Hunger
+    Statuses <|-- Poison
+    Statuses <|-- Cold
+    Statuses <|-- Heat
+    Statuses <|-- Thorns
+    Statuses <|-- Sleepy
+    Statuses <|-- Spores
+    Statuses <|-- Cursed
+  
+    class Statuses {
+        +Color statusColor
+        +Sprite icon
+        +float degradeTime
+    }
+
+    class Thorns{
+        color = green
+        degrateTime = 1
+    }
+
+    class Sleepy{
+        color = pink
+        degrateTime = 1
+    }
+
+    class Cursed{
+        color = black
+        degrateTime = 0
+    }
+
+    class Spores{
+        color = purple
+        degrateTime = 1
+    }
+
+    class Weigth {
+        color = brown
+        degrateTime = 0
+    }
+
+    class Damage {
+        color = red
+        degrateTime = 0
+    }
+
+    class Hunger {
+        color = yellow
+        degrateTime = 0
+    }
+
+    class Poison {
+        color = green
+        degrateTime = 1
+    }
+
+    class Cold {
+        color = blue
+        degrateTime = 1
+    }
+
+    class Heat {
+        color = orange
+        degrateTime = 1
+    }
