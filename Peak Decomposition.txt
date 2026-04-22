@@ -1,4 +1,6 @@
 classDiagram
+    StaminaBar <-- Statuses
+
     Statuses <|-- Weigth
     Statuses <|-- Damage
     Statuses <|-- Hunger
@@ -9,11 +11,24 @@ classDiagram
     Statuses <|-- Sleepy
     Statuses <|-- Spores
     Statuses <|-- Cursed
-  
+
+namespace statusbar {
+    class StaminaBar {
+        -int maxHealth
+        +int currentHealth get; private set;
+        +List~int~ statusValues
+        +Dictionary~String, int~ StatusDictionary;
+
+        +GetStatus(StatusName) Statuses
+        -Update()
+    }
+
     class Statuses {
+        +String Name
         +Color statusColor
         +Sprite icon
         +float degradeTime
+        +Degrade(amount)
     }
 
     class Thorns{
@@ -65,3 +80,4 @@ classDiagram
         color = orange
         degrateTime = 1
     }
+ }
