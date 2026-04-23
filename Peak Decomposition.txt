@@ -12,6 +12,13 @@ classDiagram
     Statuses <|-- Spores
     Statuses <|-- Cursed
 
+    InputHandler --> MoventController
+    InputHandler --> Interact
+    InputHandler --> Point
+    InputHandler --> Reach
+    MoventController --> StateMachine
+    StateMachine --> PlayerState
+
 namespace statusbar {
     class StaminaBar {
         -int maxHealth
@@ -90,3 +97,27 @@ namespace statusbar {
         degrateTime = 1
     }
  }
+
+namespace playerControl{
+    class MoventController{
+        
+    }
+    class InputHandler{
+
+    }
+    class Interact{
+
+    }
+    class Point{
+
+    }
+    class Reach{
+
+    }
+    class StateMachine{
+
+    }
+    class PlayerState{
+
+    }
+}
