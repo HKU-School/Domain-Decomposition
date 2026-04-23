@@ -99,23 +99,42 @@ namespace statusbar {
  }
 
 namespace playerControl{
-    class MoventController{
-        
+     class InputHandler{
+        MoveInput()
+        SprintInput()
+        JumpInput()
+        CrouchInput()
+        InteractInput()
+        PointInput()
+        ReachInput()
     }
-    class InputHandler{
-
+    class MoventController{
+        Walk()
+        Sprint()
+        Jump()
+        Crouch()
     }
     class Interact{
-
+        Pickup()
+        Open()
+        Drop()
+        Eat()
+        Throw()
     }
     class Point{
-
+        MarkPlace()
     }
     class Reach{
-
+        ExtendHand()
+        AssistClimb()
     }
     class StateMachine{
-
+        IdleState
+        MovingState 
+        SprintState
+        JumpingState 
+        CrouchingState
+        InteractingState
     }
     class PlayerState{
 
