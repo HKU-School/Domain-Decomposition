@@ -100,43 +100,50 @@ namespace statusbar {
 
 namespace playerControl{
      class InputHandler{
-        MoveInput()
-        SprintInput()
-        JumpInput()
-        CrouchInput()
-        InteractInput()
-        PointInput()
-        ReachInput()
+        +MoveInput()
+        +SprintInput()
+        +JumpInput()
+        +CrouchInput()
+        +ClimbInput()
+        +InteractInput()
+        +PointInput()
+        +ReachInput()
     }
     class MoventController{
-        Walk()
-        Sprint()
-        Jump()
-        Crouch()
+        +Walk(speed)
+        +Sprint(sprintSpeed)
+        +Jump(force)
+        +Crouch(crouchSpeed)
+        +Climb(climbSpeed)
     }
     class Interact{
-        Pickup()
-        Open()
-        Drop()
-        Eat()
-        Throw()
+        +Pickup()
+        +Open()
+        +Drop()
+        +Eat()
+        +Throw()
     }
     class Point{
-        MarkPlace()
+        +MarkPlace()
     }
     class Reach{
-        ExtendHand()
-        AssistClimb()
+        +ExtendHand()
+        +AssistClimb()
     }
     class StateMachine{
-        IdleState
-        MovingState 
-        SprintState
-        JumpingState 
-        CrouchingState
-        InteractingState
+        +IdleState
+        +MovingState 
+        +SprintState
+        +JumpingState 
+        +CrouchingState
+        +ClimbingState
+        +InteractingState
     }
     class PlayerState{
-
+        +isGrounded : bool 
+        +isMoving : bool
+        +isSprinting : bool
+        +isClimbing : bool 
+        +isInteracting : bool
     }
 }
